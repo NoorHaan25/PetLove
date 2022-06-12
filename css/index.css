@@ -9,6 +9,8 @@
 :root{
     --paddingTop:50px;
     --paddingBottom:50px;
+    --main-green-color:#74b72e;
+    --main-orange-color:#d0571c;
 }
 @media (min-width:768px) {
     .container{
@@ -490,21 +492,90 @@ body{
     .about .container .photos{
         display: flex;
         flex-direction: column;
-    
+        gap: 15px;
     }
 }
 .about .container .photos img:first-child{
     grid-area: 1/1/2/3;
 }
-/* .about .container .photos img:nth-child(2){
-    width: 267.5px;
-}
-.about .container .photos img:last-child{
-    width: 267.5px;
-} */
-
 .about .container .photos > div{
     display: flex;
+}
+/* start services */
+.Services{
+    padding-top: var(--paddingTop);
+    padding-bottom: var(--paddingBottom);
+    background-color: #ececec;
+}
+.Services .container h6{
+    font-size: 23px;
+    text-align: center;
+    color: var(--main-green-color);
+    padding-bottom: 20px;
+}
+.Services .container > h1{
+    text-align: center;
+    font-size: 55px;
+    letter-spacing: 3px;
+}
+@media (max-width:992px) {
+    .Services .container > h1{
+        font-size: 33px;
+        
+    }
+}
+.Services .container > h1 > span{
+    color: var(--main-orange-color);
+}
+.Services .container .Premium-Pet-Services{
+    padding-top: var(--paddingTop);
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 50px;
+    
+}
+@media (max-width:992px) {
+    .Services .container .Premium-Pet-Services{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.Services .container .Premium-Pet-Services .pet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    background-color: white;
+    padding: 55px;
+}
+@media (max-width:992px) {
+    .Services .container .Premium-Pet-Services .pet{
+        padding: 26px 20px;
+        gap: 16px;
+        
+    }
+}
+.Services .container .Premium-Pet-Services .pet > i{
+    font-size: 50px;
+    color: var(--main-green-color);
+}
+.Services .container .Premium-Pet-Services .pet h1{
+    font-weight: normal;
+    font-size: 33px;
+}
+@media (max-width:992px) {
+    .Services .container .Premium-Pet-Services .pet h1{
+        font-size: 29px;
+        
+    }
+}
+.Services .container .Premium-Pet-Services .pet p{
+    color: gray;
+    text-align: center;
+}
+.Services .container .Premium-Pet-Services .pet a{
+    color: var(--main-orange-color);
+    font-weight: bold;
 }
 
 
