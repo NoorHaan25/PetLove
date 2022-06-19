@@ -201,7 +201,7 @@ body{
 }
 @media (max-width:767px){
     .landing{
-        height: 50%;
+        height: 50vh;
     }
 }
 .landing::after{
@@ -357,7 +357,7 @@ body{
     font-size: 16px;;
 }
 .vacation .container .Book {
-    padding-top: 40px;
+    padding: 40px;
 }
 @media (max-width:991px) {
     .vacation .container .book {
@@ -410,7 +410,7 @@ body{
     padding-top: 20px;
     color: gray;
 }
-/* start about */
+/* about */
 .about{
     padding-top: var(--paddingTop);
     padding-bottom: var(--paddingBottom);
@@ -501,7 +501,7 @@ body{
     width: 50%;
 }
 
-/* start services */
+/* services */
 .Services{
     padding-top: var(--paddingTop);
     padding-bottom: var(--paddingBottom);
@@ -671,6 +671,12 @@ body{
     font-size: 55px;
     letter-spacing: 3px;
     
+}
+@media (max-width:991px) {
+    .pricing .container h1{
+    font-size: 35px;
+    
+    }
 }
 .pricing .container h1 > span{
     color:var(--main-orange-color);
