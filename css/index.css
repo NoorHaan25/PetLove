@@ -418,7 +418,8 @@ body{
 .about .container{
     display: grid;
     grid-template-columns: repeat(auto-fill , minmax(357px , 1fr));
-    gap: 20px;
+    gap: 60px;
+    
 }
 @media (max-width:991px) {
     .about .container {
@@ -457,8 +458,9 @@ body{
 }
 .about .container .text p:nth-child(4){
     padding-bottom: 20px;
-    font-size: 15px;
+    font-size: 16px;
     color: #999;
+    line-height: 1.4;
 }
 .about .container .text ul{
     padding-bottom: 20px;
@@ -484,23 +486,21 @@ body{
     font-size: 20px;
 }
 .about .container .photos{
-    display: grid;
-    grid-template-columns: repeat( 2 , auto );
-    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-@media (max-width:991px) {
-    .about .container .photos{
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
+
+.about .container .photos > img{
+    width: 100%;
 }
-.about .container .photos img:first-child{
-    grid-area: 1/1/2/3;
-}
-.about .container .photos > div{
+.about .container .photos > div {
     display: flex;
 }
+.about .container .photos > div img{
+    width: 50%;
+}
+
 /* start services */
 .Services{
     padding-top: var(--paddingTop);
@@ -560,8 +560,7 @@ body{
     color: var(--main-green-color);
 }
 .Services .container .Premium-Pet-Services .pet h1{
-    font-weight: normal;
-    font-size: 33px;
+    font-size: 22px;
 }
 @media (max-width:992px) {
     .Services .container .Premium-Pet-Services .pet h1{
@@ -577,5 +576,225 @@ body{
     color: var(--main-orange-color);
     font-weight: bold;
 }
+/* features */
+.Features{
+    padding-bottom: var(--paddingBottom);
+}
+.Features .container{
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
 
+.Features .container img{
+    max-width: 40%;
+}
+@media (max-width:991px) {
+    .Features .container img{
+        max-width: 100%;
+    }
+}
+.Features .container .special-care{
+    padding-top: var(--paddingTop);
+    flex-basis: 50%;
+}
+@media (max-width:991px) {
+    .Features .container .special-care{
+        flex-basis: 100%;
+    }
+}
+.Features .container .special-care h6{
+    font-size: 25px;
+    font-weight: normal;
+    color: var(--main-green-color);
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+}
+.Features .container .special-care > h1{
+    font-size: 52px;
+    padding-bottom: 20px;
+}
+@media (max-width:991px) {
+    .Features .container .special-care > h1{
+        font-size: 36px;
+    }
+}
+.Features .container .special-care > h1 span{
+    color: var(--main-orange-color);
+    padding-bottom: 20px;
+}
+.Features .container .special-care p{
+    color: gray;
+    padding-bottom: 20px;
+    font-size: 17px;
+}
+.Features .container .special-care .features{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr );
+}
+@media (max-width:991px) {
+    .Features .container .special-care .features{
+        display:flex;
+        flex-direction: column;
+    }
+}
+.Features .container .special-care .features .feat{
+    padding: 20px 0;
+}
 
+.Features .container .special-care .features .feat i{
+    font-size: 45px;
+    padding-right: 10px;
+    color: var(--main-green-color);
+} 
+.Features .container .special-care .features .feat h1{
+    display: inline;
+    font-size: 16px;
+    font-weight: normal;
+} 
+/* pricing */
+.pricing{
+    padding-top:var(--paddingTop);
+    padding-bottom: var(--paddingBottom);
+    background-color: #ececec;
+}
+.pricing .container{
+    text-align: center;
+}
+.pricing .container h6{
+    font-size: 24px;
+    font-weight: normal;
+    color: #74b72e;
+    padding-bottom: 20px;
+}
+.pricing .container h1{
+    font-size: 55px;
+    letter-spacing: 3px;
+    
+}
+.pricing .container h1 > span{
+    color:var(--main-orange-color);
+}
+.pricing .container .best-price{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.pricing .container .price{
+    flex-basis: calc( 33.3% - 30px);
+    margin: 15px;
+    background-color: white;
+    box-shadow: 0 1px 1px 1px #0000004d;
+}
+@media (max-width:991px) {
+    .pricing .container .price{
+        flex-basis: calc( 100% - 30px);
+        
+    }
+}
+.pricing .container .price .img{
+    position: relative;
+}
+.pricing .container .price .img::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #00000089;
+}
+.pricing .container .best-price .img img{
+    max-width: 100%;
+}
+.pricing .container .best-price .price .Img{
+    position: relative;
+}
+.pricing .container .best-price .price .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 1;
+}
+.pricing .container .best-price .price .text h2{
+    padding: 0 0 20px;
+    font-size: 25px;
+    color: var(--main-orange-color);
+    width: 0;
+}
+#standard{
+    color: var(--main-green-color);
+}
+.pricing .container .best-price .price .text > div{
+    color: white;
+    font-size: 55px;
+    font-weight: bold;
+    position: relative;
+}
+.pricing .container .best-price .price .text > div::after{
+    
+    content: "/MO";
+    left: 15px;
+    top: -15px;
+    color: white;
+    /* position: absolute; */
+    font-size: 19px;
+    font-weight: normal;
+}
+.pricing .container .best-price .price .text > div::before{
+    content: "$";
+    left: 0;
+    top: 0;
+    color: white;
+    position: absolute;
+    font-size: 30px;
+    margin: -15px;
+}
+.pricing .container .best-price .price .Img + ul{
+    padding: 20px 0;
+}
+.pricing .container .best-price .price .Img + ul > div{
+    padding: 10px;
+    border-bottom: solid 1px #00000036;
+}
+.pricing .container .best-price .price .Img + ul > div:last-child{ 
+    border-bottom: none;
+}
+.pricing .container .best-price .price .Img + ul li{
+    display: inline;
+}
+.pricing .container .best-price .price .Img + ul i{
+    padding: 0 10px;
+    font-size: 18px;
+}
+.pricing .container .best-price .price .Img + ul .fa-xmark{
+    color: red;
+}
+.pricing .container .best-price .price .Img + ul .fa-check{
+    color: var(--main-green-color);
+}
+.pricing .container .best-price .price input{
+    width: 100%;
+    border: none;
+    padding: 20px;
+    font-size: 15px;
+    background-color: #d0581ceb;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.pricing .container .best-price .price:nth-child(2) input{
+    color: black;
+        background-color: #74b72ede;
+}
+.pricing .container .best-price .price:nth-child(2) input:hover{
+    color: white;
+    background-color: var(--main-green-color);
+}
+.pricing .container .best-price .price input:hover{
+    background-color: var(--main-orange-color);
+}
+.pricing .container .best-price .price input:hover{
+    background-color: var(--main-orange-color);
+}
