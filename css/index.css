@@ -906,3 +906,120 @@ body{
 .team .container .members .member:hover > .text{
     bottom: 68px;
 } 
+/* testimonial */
+.testimonial{
+    padding-top: var(--paddingTop);
+    padding-bottom: var(--paddingBottom);
+    background-color: #ececec;
+}
+.testimonial .container{
+    text-align: center;
+    overflow: hidden;
+}
+.testimonial .container h6{
+    font-size: 24px;
+    font-weight: normal;
+    color: #74b72e;
+    padding-bottom: 20px;
+}
+.testimonial .container > h1{
+    font-size: 55px;
+    letter-spacing: 3px;
+    
+}
+@media (max-width:991px) {
+    .testimonial .container > h1{
+    font-size: 35px;
+    }
+}
+.testimonial .container h1 > span{
+    color:var(--main-orange-color);
+}
+.testimonial .container .clients{
+    display: inline-flex;
+    gap: 40px;
+    position: relative; 
+    padding: 50px 0;
+    animation: clients 15s ease-in-out 0.7s infinite backwards; 
+}
+.testimonial .container .client{
+    background-color: white;
+    width:calc(390px - 40px);
+} 
+@media (max-width:991px) {
+    .testimonial .container .client{
+        width: 650px;
+    }
+}
+.testimonial .container .clients:hover{
+    animation-play-state: paused;
+}
+.testimonial .container .client .id{
+    display: flex;
+    position: relative;
+}
+.testimonial .container .client .text{
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 14px;
+}
+.testimonial .container .client .text h1{
+    font-size: 18px;
+    padding: 10px 0;
+}
+.testimonial .container .client .text > p{
+    color: gray;
+}
+.testimonial .container .client > p{
+    color: gray;
+    padding: 13px;
+    text-align: start;
+    line-height: 1.6;
+    width: 335px; 
+}
+@keyframes clients {
+    0%{
+        left: 0;
+    }
+    50%{
+        left: -400px;
+    }
+    100%{
+        left: 0;
+    }
+    /* 60%{
+        left: -750px;
+    }
+    90%{
+        left: -1125px;
+    } */
+}
+@media (max-width:991px) {
+    @keyframes clients {
+        0% {
+            left: 0;
+        }
+        20%{
+            left: -400px;
+        }
+        40%{
+            left: -800;
+        }
+        60%{
+            left: -1200px;
+        } 
+        80%{
+            left:-800px ;
+        }
+        90%{
+            left: -400px;
+        }
+        100%{
+            left: 0;
+        }
+    }
+}
