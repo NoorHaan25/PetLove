@@ -690,7 +690,7 @@ body{
     flex-basis: calc( 33.3% - 30px);
     margin: 15px;
     background-color: white;
-    box-shadow: 0 1px 1px 1px #0000004d;
+    box-shadow: 0 0 1px 0 #0000006b;
 }
 @media (max-width:991px) {
     .pricing .container .price{
@@ -744,7 +744,6 @@ body{
     left: 15px;
     top: -15px;
     color: white;
-    /* position: absolute; */
     font-size: 19px;
     font-weight: normal;
 }
@@ -792,7 +791,7 @@ body{
 }
 .pricing .container .best-price .price:nth-child(2) input{
     color: black;
-        background-color: #74b72ede;
+    background-color: #74b72ede;
 }
 .pricing .container .best-price .price:nth-child(2) input:hover{
     color: white;
@@ -977,7 +976,7 @@ body{
     padding: 13px;
     text-align: start;
     line-height: 1.6;
-    /* width: 335px;  */
+    
 } 
 @keyframes clients {
     0%{
@@ -1100,4 +1099,117 @@ body{
 .pet-blog .container .blog .text a{
     font-weight: bold;
     color: var(--main-orange-color);
+}
+/* footer */
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(278px , 1fr));
+    padding: 50px 25px;
+    background-color: #000000de;
+    color: white;
+}
+@media (max-width:992px) {
+    .footer{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+.footer .col-1{
+    grid-area:1/1/2/3 ;
+}
+.footer .col-1 .logo{
+    font-size: 45px;
+    font-weight: bolder;
+}
+.footer .col-1 .logo span{
+    color: orangered;
+}
+.footer .col-1 p{
+    padding: 20px 38px 0 0;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.footer .col-2{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer .col-2 h3{
+    color: var(--main-orange-color);
+}
+.footer .col-2 .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: start;
+}
+.footer .col-2 .contact p > i{
+    padding-right: 15px;
+}
+.footer .col-2 .icons{
+    display: flex;
+    gap: 7px;
+    
+}
+.footer .col-2 .icons i{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.footer .col-2 .icons i:hover{
+    background-color: white;
+    color: #000000de;
+}
+.footer .col-3 h3{
+    color: var(--main-orange-color);
+}
+.footer .col-3 ul{
+    padding: 20px 0;
+}
+.footer .col-3 ul li{
+    padding-bottom: 15px;
+    position: relative;
+}
+.footer .col-3 ul li::before{
+    content: "\f105";
+    font-family: 'Font Awesome 5 free';
+    position: absolute;
+    font-weight: 600;
+}
+.footer .col-3 ul li a{
+    color: white;
+    padding: 0 20px;
+}
+.footer .col-4 h3{
+    color: var(--main-orange-color);
+}
+.footer .col-4 form{
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+}
+.footer .col-4 form input{
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.footer .col-4 form input:last-child{
+    background-color: var(--main-orange-color);
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
 }
